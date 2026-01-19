@@ -53,11 +53,11 @@ Edite o array `projects` em `src/components/Projects.tsx` para adicionar seus pr
 ```typescript
 const projects: Project[] = [
   {
-    title: 'Nome do Projeto',
-    description: 'Descrição do projeto...',
-    technologies: ['React', 'TypeScript'],
-    link: 'https://seu-projeto.com',
-    github: 'https://github.com/usuario/projeto',
+    title: "Nome do Projeto",
+    description: "Descrição do projeto...",
+    technologies: ["React", "TypeScript"],
+    link: "https://seu-projeto.com",
+    github: "https://github.com/usuario/projeto",
   },
 ];
 ```
@@ -65,6 +65,7 @@ const projects: Project[] = [
 ### 3. Cores e Estilos
 
 Os estilos podem ser personalizados em:
+
 - **`src/app/globals.css`**: Variáveis CSS e estilos globais
 - **Componentes individuais**: Classes Tailwind CSS
 
