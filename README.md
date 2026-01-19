@@ -1,13 +1,45 @@
 # Meu Portfólio
 
-Portfólio pessoal desenvolvido com Next.js, React, TypeScript e Tailwind CSS.
+Portfólio pessoal moderno e responsivo desenvolvido com Next.js, React, TypeScript, Tailwind CSS e Framer Motion.
+
+## ✨ Características
+
+- 🎨 **Design Moderno**: Interface elegante com gradientes e efeitos visuais
+- 🎭 **Animações Suaves**: Animações fluidas com Framer Motion
+- 📱 **Totalmente Responsivo**: Adaptável a todos os dispositivos
+- ⚡ **Performance Otimizada**: Construído com Next.js para máxima performance
+- 🎯 **Scroll Suave**: Navegação intuitiva com scroll suave entre seções
+- 🌐 **Multi-idioma**: Interface em português
 
 ## 🚀 Começando
 
-Primeiro, instale as dependências e execute o servidor de desenvolvimento:
+### Pré-requisitos
+
+- Node.js 18+ instalado
+- npm, yarn ou pnpm
+
+### Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/Mario-Otavio/meuPortifolio.git
+cd meu_portifolio
+```
+
+2. Instale as dependências:
 
 ```bash
 npm install
+# ou
+yarn install
+# ou
+pnpm install
+```
+
+3. Execute o servidor de desenvolvimento:
+
+```bash
 npm run dev
 # ou
 yarn dev
@@ -15,76 +47,142 @@ yarn dev
 pnpm dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
 ## 📁 Estrutura do Projeto
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx      # Layout principal
-│   ├── page.tsx        # Página inicial
-│   └── globals.css     # Estilos globais
+│   ├── layout.tsx          # Layout principal com background fixo
+│   ├── page.tsx            # Página inicial
+│   └── globals.css         # Estilos globais e classes customizadas
 └── components/
-    ├── Header.tsx      # Cabeçalho com navegação
-    ├── Hero.tsx        # Seção hero/introdução
-    ├── About.tsx       # Seção sobre mim
-    ├── Projects.tsx    # Seção de projetos
-    ├── Contact.tsx     # Seção de contato
-    └── Footer.tsx      # Rodapé
+    ├── BarraMenu.tsx       # Barra de navegação com menu mobile
+    ├── Hero.tsx            # Seção hero com orbes animados e cubos de tecnologia
+    ├── Tecnologias.tsx     # Stack de tecnologias com cards animados
+    ├── Projetos.tsx        # Seção de projetos com cards interativos
+    ├── Contato.tsx         # Formulário de contato e informações
+    ├── Rodape.tsx          # Rodapé
+    ├── AnimacaoDoCursor.tsx # Animação de cursor personalizada
+    └── ui/                 # Componentes UI reutilizáveis
+        ├── card.tsx
+        ├── dialog.tsx
+        └── separator.tsx
 ```
 
-## 🎨 Personalização
+## 🎨 Seções do Portfólio
 
-### 1. Informações Pessoais
+### Hero
 
-Edite os seguintes arquivos para personalizar suas informações:
+- Apresentação pessoal com animações de orbes
+- Cubos flutuantes representando tecnologias
+- Botões de ação (Ver Projetos, Entre em Contato)
 
-- **`src/components/Hero.tsx`**: Altere "Seu Nome" e a descrição
-- **`src/components/About.tsx`**: Atualize a biografia e tecnologias
-- **`src/components/Projects.tsx`**: Adicione seus projetos reais
-- **`src/components/Contact.tsx`**: Atualize email, LinkedIn e GitHub
-- **`src/components/Footer.tsx`**: Altere o nome no rodapé
+### Tecnologias
 
-### 2. Projetos
+- Cards interativos com hover effects
+- Descrições de cada tecnologia
+- Animações sequenciais ao scroll
 
-Edite o array `projects` em `src/components/Projects.tsx` para adicionar seus projetos:
+### Projetos
 
-```typescript
-const projects: Project[] = [
-  {
-    title: "Nome do Projeto",
-    description: "Descrição do projeto...",
-    technologies: ["React", "TypeScript"],
-    link: "https://seu-projeto.com",
-    github: "https://github.com/usuario/projeto",
-  },
-];
-```
+- Cards de projetos com imagens
+- Links para projetos e repositórios
+- Animações de entrada ao scroll
 
-### 3. Cores e Estilos
+### Contato
 
-Os estilos podem ser personalizados em:
+- Formulário de contato integrado com WhatsApp
+- Cards de informações de contato
+- Links para redes sociais
 
-- **`src/app/globals.css`**: Variáveis CSS e estilos globais
-- **Componentes individuais**: Classes Tailwind CSS
+## 🛠️ Tecnologias Utilizadas
 
-## 🛠️ Tecnologias
-
-- [Next.js](https://nextjs.org) - Framework React
-- [TypeScript](https://www.typescriptlang.org) - Tipagem estática
-- [Tailwind CSS](https://tailwindcss.com) - Estilização
-- [React](https://react.dev) - Biblioteca UI
+- **[Next.js](https://nextjs.org)** - Framework React para produção
+- **[React](https://react.dev)** - Biblioteca JavaScript para interfaces
+- **[TypeScript](https://www.typescriptlang.org)** - Superset JavaScript com tipagem estática
+- **[Tailwind CSS](https://tailwindcss.com)** - Framework CSS utility-first
+- **[Framer Motion](https://www.framer.com/motion/)** - Biblioteca de animações para React
+- **[React Icons](https://react-icons.github.io/react-icons/)** - Ícones populares
+- **[Tabler Icons](https://tabler.io/icons)** - Ícones adicionais
+- **[Lucide Icons](https://lucide.dev)** - Ícones modernos e minimalistas
 
 ## 📦 Scripts Disponíveis
 
 - `npm run dev` - Inicia o servidor de desenvolvimento
 - `npm run build` - Cria build de produção
 - `npm run start` - Inicia o servidor de produção
-- `npm run lint` - Executa o linter
+- `npm run lint` - Executa o linter ESLint
+
+## 🎯 Funcionalidades Principais
+
+### Animações
+
+- Animações de entrada ao scroll usando Framer Motion
+- Efeitos de hover nos cards
+- Transições suaves entre seções
+- Orbes e cubos flutuantes no Hero
+
+### Responsividade
+
+- Menu hambúrguer para dispositivos móveis
+- Layout adaptável para tablets e desktops
+- Ajustes de posicionamento para diferentes tamanhos de tela
+
+### Navegação
+
+- Scroll suave para seções específicas
+- Menu ativo destacado conforme a seção visível
+- Links diretos para WhatsApp
 
 ## 🚢 Deploy
 
 O projeto pode ser facilmente deployado na [Vercel](https://vercel.com), plataforma criada pelos desenvolvedores do Next.js.
 
+### Deploy na Vercel
+
+1. Faça push do código para o GitHub
+2. Acesse [vercel.com](https://vercel.com)
+3. Importe seu repositório
+4. Configure as variáveis de ambiente (se necessário)
+5. Deploy automático!
+
 Para mais informações sobre deploy, consulte a [documentação do Next.js](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## 📝 Personalização
+
+### Alterar Informações Pessoais
+
+- **Hero**: Edite `src/components/Hero.tsx` para alterar nome e descrição
+- **Tecnologias**: Modifique o array `tecnologias` em `src/components/Tecnologias.tsx`
+- **Projetos**: Atualize o array `projetos` em `src/components/Projetos.tsx`
+- **Contato**: Altere informações em `src/components/Contato.tsx`
+- **WhatsApp**: Atualize o número em `src/components/Hero.tsx` e `src/components/Contato.tsx`
+
+### Alterar Cores e Estilos
+
+- **Background**: Modifique as classes em `src/app/layout.tsx`
+- **Gradientes**: Ajuste as classes customizadas em `src/app/globals.css`
+- **Componentes**: Personalize classes Tailwind nos componentes individuais
+
+## 📄 Licença
+
+Este projeto é de código aberto e está disponível sob a licença MIT.
+
+## 👤 Autor
+
+**Mário Otávio**
+
+- GitHub: [@Mario-Otavio](https://github.com/Mario-Otavio)
+- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
+
+## 🙏 Agradecimentos
+
+- Next.js pela excelente documentação
+- Framer Motion pela biblioteca de animações
+- Comunidade open source por todas as ferramentas incríveis
+
+---
+
+⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
