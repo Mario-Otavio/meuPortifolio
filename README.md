@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meu Portfólio
 
-## Getting Started
+Portfólio pessoal desenvolvido com Next.js, React, TypeScript e Tailwind CSS.
 
-First, run the development server:
+## 🚀 Começando
+
+Primeiro, instale as dependências e execute o servidor de desenvolvimento:
 
 ```bash
+npm install
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── layout.tsx      # Layout principal
+│   ├── page.tsx        # Página inicial
+│   └── globals.css     # Estilos globais
+└── components/
+    ├── Header.tsx      # Cabeçalho com navegação
+    ├── Hero.tsx        # Seção hero/introdução
+    ├── About.tsx       # Seção sobre mim
+    ├── Projects.tsx    # Seção de projetos
+    ├── Contact.tsx     # Seção de contato
+    └── Footer.tsx      # Rodapé
+```
 
-## Learn More
+## 🎨 Personalização
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Informações Pessoais
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edite os seguintes arquivos para personalizar suas informações:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`src/components/Hero.tsx`**: Altere "Seu Nome" e a descrição
+- **`src/components/About.tsx`**: Atualize a biografia e tecnologias
+- **`src/components/Projects.tsx`**: Adicione seus projetos reais
+- **`src/components/Contact.tsx`**: Atualize email, LinkedIn e GitHub
+- **`src/components/Footer.tsx`**: Altere o nome no rodapé
 
-## Deploy on Vercel
+### 2. Projetos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edite o array `projects` em `src/components/Projects.tsx` para adicionar seus projetos:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```typescript
+const projects: Project[] = [
+  {
+    title: 'Nome do Projeto',
+    description: 'Descrição do projeto...',
+    technologies: ['React', 'TypeScript'],
+    link: 'https://seu-projeto.com',
+    github: 'https://github.com/usuario/projeto',
+  },
+];
+```
+
+### 3. Cores e Estilos
+
+Os estilos podem ser personalizados em:
+- **`src/app/globals.css`**: Variáveis CSS e estilos globais
+- **Componentes individuais**: Classes Tailwind CSS
+
+## 🛠️ Tecnologias
+
+- [Next.js](https://nextjs.org) - Framework React
+- [TypeScript](https://www.typescriptlang.org) - Tipagem estática
+- [Tailwind CSS](https://tailwindcss.com) - Estilização
+- [React](https://react.dev) - Biblioteca UI
+
+## 📦 Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria build de produção
+- `npm run start` - Inicia o servidor de produção
+- `npm run lint` - Executa o linter
+
+## 🚢 Deploy
+
+O projeto pode ser facilmente deployado na [Vercel](https://vercel.com), plataforma criada pelos desenvolvedores do Next.js.
+
+Para mais informações sobre deploy, consulte a [documentação do Next.js](https://nextjs.org/docs/app/building-your-application/deploying).
