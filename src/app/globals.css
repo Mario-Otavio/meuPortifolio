@@ -61,7 +61,6 @@ html {
 body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  touch-action: none;
 }
 
 a {

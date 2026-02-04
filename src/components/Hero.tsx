@@ -230,59 +230,59 @@ export default function Hero() {
           cubo.nome === "JS"
             ? 10
             : cubo.nome === "MUI"
-            ? 12
-            : cubo.nome === "GitHub"
-            ? 5
-            : 15;
+              ? 12
+              : cubo.nome === "GitHub"
+                ? 5
+                : 15;
         const posicaoAjustada =
           isMobile && cubo.posicao.top?.includes("%")
             ? {
-                ...cubo.posicao,
-                // CSS precisa de ajuste especial - move 180px para baixo
-                // React precisa de ajuste especial - move 200px para baixo
-                top:
-                  cubo.nome === "CSS"
-                    ? `calc(${cubo.posicao.top} + 180px)`
-                    : cubo.nome === "React"
+              ...cubo.posicao,
+              // CSS precisa de ajuste especial - move 180px para baixo
+              // React precisa de ajuste especial - move 200px para baixo
+              top:
+                cubo.nome === "CSS"
+                  ? `calc(${cubo.posicao.top} + 180px)`
+                  : cubo.nome === "React"
                     ? `calc(${cubo.posicao.top} + 200px)`
                     : `${Math.max(
-                        5,
-                        parseFloat(cubo.posicao.top) - ajusteTop
-                      )}%`,
-                // MUI precisa de ajuste especial - move mais para esquerda
-                ...(cubo.nome === "MUI" && cubo.posicao.left?.includes("%")
-                  ? {
-                      left: `calc(${cubo.posicao.left} - 50px)`,
-                    }
-                  : {}),
-                // CSS precisa de ajuste especial - move mais para esquerda
-                ...(cubo.nome === "CSS" && cubo.posicao.left?.includes("%")
-                  ? {
-                      left: `${Math.max(
-                        5,
-                        parseFloat(cubo.posicao.left) - 5
-                      )}%`,
-                    }
-                  : {}),
-                // GitHub precisa de ajuste especial - move mais para direita
-                ...(cubo.nome === "GitHub" && cubo.posicao.right?.includes("%")
-                  ? {
-                      right: `${Math.max(
-                        5,
-                        parseFloat(cubo.posicao.right) - 10
-                      )}%`,
-                    }
-                  : {}),
-                // React precisa de ajuste especial - move mais para direita
-                ...(cubo.nome === "React" && cubo.posicao.right?.includes("%")
-                  ? {
-                      right: `${Math.max(
-                        5,
-                        parseFloat(cubo.posicao.right) - 5
-                      )}%`,
-                    }
-                  : {}),
-              }
+                      5,
+                      parseFloat(cubo.posicao.top) - ajusteTop
+                    )}%`,
+              // MUI precisa de ajuste especial - move mais para esquerda
+              ...(cubo.nome === "MUI" && cubo.posicao.left?.includes("%")
+                ? {
+                  left: `calc(${cubo.posicao.left} - 50px)`,
+                }
+                : {}),
+              // CSS precisa de ajuste especial - move mais para esquerda
+              ...(cubo.nome === "CSS" && cubo.posicao.left?.includes("%")
+                ? {
+                  left: `${Math.max(
+                    5,
+                    parseFloat(cubo.posicao.left) - 5
+                  )}%`,
+                }
+                : {}),
+              // GitHub precisa de ajuste especial - move mais para direita
+              ...(cubo.nome === "GitHub" && cubo.posicao.right?.includes("%")
+                ? {
+                  right: `${Math.max(
+                    5,
+                    parseFloat(cubo.posicao.right) - 10
+                  )}%`,
+                }
+                : {}),
+              // React precisa de ajuste especial - move mais para direita
+              ...(cubo.nome === "React" && cubo.posicao.right?.includes("%")
+                ? {
+                  right: `${Math.max(
+                    5,
+                    parseFloat(cubo.posicao.right) - 5
+                  )}%`,
+                }
+                : {}),
+            }
             : cubo.posicao;
 
         return (
@@ -409,7 +409,7 @@ export default function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="bg-white/5! backdrop-blur-lg! rounded-full px-5! border border-white/30! hover:bg-white/10! hover:backdrop-blur-lg! hover:border-white/20! transition-all! duration-300! cursor-pointer w-[12rem] sm:w-auto"
+              className="bg-white/5! backdrop-blur-xl! rounded-full px-5! border border-white/30! hover:bg-white/10! hover:backdrop-blur-xl! hover:border-white/20! transition-all! duration-300! cursor-pointer w-[12rem] sm:w-auto"
             >
               <Link
                 href="https://wa.me/5565998153363?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os."

@@ -96,19 +96,39 @@ export default function Contato() {
           Vamos conversar!
         </motion.p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
+
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, margin: "0px 0px -150px 0px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.12,
+                delayChildren: 0.1,
+              },
+            },
+          }}
+        >
           <motion.div
             className="flex flex-col"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "0px 0px -100px 0px" }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, ease: "easeOut" },
+              },
+            }}
           >
             <div className="space-y-4! mb-3! sm:mb-4! lg:mb-8!">
               {contatos.map((item) => {
                 const Icone = item.icone;
                 const Conteudo = (
-                  <div className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4! backdrop-blur-lg">
+                  <div className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4! backdrop-blur-xl">
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-700/50 text-purple-400">
                       <Icone className="h-6 w-6" />
                     </div>
@@ -157,7 +177,7 @@ export default function Contato() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-white/10 bg-white/5 p-6! text-white/90 backdrop-blur-lg mb-4! sm:mb-5! lg:mb-8!">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-6! text-white/90 backdrop-blur-xl mb-4! sm:mb-5! lg:mb-8!">
               <p className="text-base font-medium">
                 "A melhor maneira de prever o futuro é criá-lo."
               </p>
@@ -166,11 +186,15 @@ export default function Contato() {
           </motion.div>
 
           <motion.div
-            className="rounded-2xl border border-white/10 bg-white/5 p-4! backdrop-blur-lg mb-8!"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "0px 0px -100px 0px" }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            className="rounded-2xl border border-white/10 bg-white/5 p-4! backdrop-blur-xl mb-8!"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, ease: "easeOut" },
+              },
+            }}
           >
             <form className="space-y-5!" onSubmit={lidarComEnvio}>
               <div>
@@ -206,7 +230,7 @@ export default function Contato() {
               </Button>
             </form>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

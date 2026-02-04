@@ -62,25 +62,23 @@ function CardTecnologia({
 
   return (
     <motion.div
-      className="group relative bg-white/5 backdrop-blur-lg rounded-lg border border-white/10 p-6! w-62 hover:bg-white/10 hover:backdrop-blur-lg hover:border-white/20 transition-all duration-300 cursor-pointer"
+      className="group relative bg-white/5 backdrop-blur-xl rounded-lg border border-white/10 p-6! hover:bg-white/10 hover:backdrop-blur-xl hover:border-white/20 transition-all duration-300 cursor-pointer"
       variants={{
-        hidden: { opacity: 0, scale: 0.5, y: 50, rotate: -10 },
+        hidden: { opacity: 0, scale: 0.95, y: 30 },
         visible: {
           opacity: 1,
           scale: 1,
           y: 0,
-          rotate: 0,
           transition: {
             duration: 0.5,
-            ease: [0.34, 1.56, 0.64, 1], // Easing com bounce
+            ease: "easeOut",
           },
         },
       }}
       whileHover={{
         scale: 1.05,
         y: -5,
-        rotate: 2,
-        transition: { duration: 0.1, ease: "easeOut" },
+        transition: { duration: 0.2, ease: "easeOut" },
       }}
     >
       <div
@@ -231,7 +229,7 @@ export default function Tecnologias() {
             return linhas.map((linha, indiceLinha) => (
               <motion.div
                 key={indiceLinha}
-                className="flex flex-wrap sm:flex-nowrap justify-center gap-4 sm:gap-6 lg:gap-8 w-full"
+                className="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false, margin: "0px 0px -150px 0px" }}
@@ -240,8 +238,8 @@ export default function Tecnologias() {
                   visible: {
                     opacity: 1,
                     transition: {
-                      delay: indiceLinha * (colunas === 1 ? 0.1 : 0.3),
-                      staggerChildren: 0.1,
+                      delay: 0,
+                      staggerChildren: 0.12,
                       delayChildren: 0.1,
                     },
                   },

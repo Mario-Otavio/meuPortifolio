@@ -12,7 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 interface Projeto {
@@ -31,7 +31,8 @@ const projetos: Projeto[] = [
       "Sistema que gerencia com eficiência os materiais de móveis planejados! Controle entradas e saídas, acompanha níveis de estoque em tempo real, gera alertas de reposição e otimizar o uso dos materiais.",
     tecnologias: [
       "Next.js",
-      "React",
+      "C#",
+      "ASP.NET",
       "PostgreSQL",
       "Tailwind CSS",
       "Axios",
@@ -41,12 +42,12 @@ const projetos: Projeto[] = [
     link: "https://arte-final.vercel.app/",
   },
   {
-    titulo: "Gerenciador de Tarefas",
+    titulo: "Decorando Momentos",
     descricao:
-      "Sistema simples que permite adicionar, concluir e remover tarefas de forma prática, com uma interface intuitiva e responsiva.",
-    tecnologias: ["React", "Lucide Icons", "Tailwind CSS"],
-    imagem: "/gerenciador.png",
-    link: "https://gerenciadortasks.vercel.app/",
+      "Landing page de aluguel de decorações temáticas completas para festas infantis e aniversários. Transforme seu evento com cenários incríveis como Homem-Aranha, Mundo Bita, Carros e muitos outros!",
+    tecnologias: ["Next.js", "React", "Framer Motion", "Tailwind CSS", "Shadcn/UI"],
+    imagem: "/Logo-decorando-momento.png",
+    link: "https://decorandomomentos.vercel.app/",
   },
   {
     titulo: "Pokédex",
@@ -64,6 +65,15 @@ const projetos: Projeto[] = [
     imagem: "/naruto.png",
     link: "https://universo-naruto.vercel.app/",
   },
+  {
+    titulo: "Gerenciador de Tarefas",
+    descricao:
+      "Sistema simples que permite adicionar, concluir e remover tarefas de forma prática, com uma interface intuitiva e responsiva.",
+    tecnologias: ["React", "Lucide Icons", "Tailwind CSS"],
+    imagem: "/gerenciador.png",
+    link: "https://gerenciadortasks.vercel.app/",
+  },
+
 ];
 
 export default function Projetos() {
@@ -121,8 +131,8 @@ export default function Projetos() {
                   visible: {
                     opacity: 1,
                     transition: {
-                      delay: indiceLinha * 0.3,
-                      staggerChildren: 0.15,
+                      delay: indiceLinha * 0.25,
+                      staggerChildren: 0.12,
                       delayChildren: 0.1,
                     },
                   },
@@ -132,7 +142,7 @@ export default function Projetos() {
                   <motion.div
                     key={indiceCard}
                     variants={{
-                      hidden: { opacity: 0, scale: 0.9, y: 30 },
+                      hidden: { opacity: 0, scale: 0.95, y: 30 },
                       visible: {
                         opacity: 1,
                         scale: 1,
@@ -144,12 +154,12 @@ export default function Projetos() {
                       },
                     }}
                     whileHover={{
-                      y: -12,
+                      y: -8,
                       scale: 1.02,
                       transition: { duration: 0.2, ease: "easeOut" },
                     }}
                   >
-                    <Card className="group relative overflow-hidden bg-white/5 backdrop-blur-lg border border-white/10 hover:border-white/20 transition-all duration-300 h-full flex flex-col">
+                    <Card className="group relative overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 h-full flex flex-col">
                       {/* Área da imagem */}
                       <div className="relative w-full h-55 overflow-hidden bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-pink-500/20 rounded-t-md">
                         {projeto.imagem ? (
@@ -159,7 +169,7 @@ export default function Projetos() {
                               alt={projeto.titulo}
                               fill
                               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                              className="object-contain group-hover:scale-110 transition-transform duration-500"
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
                               unoptimized
                               priority={indiceLinha === 0 && indiceCard === 0}
                             />
@@ -176,7 +186,7 @@ export default function Projetos() {
                       </div>
 
                       <CardHeader className="flex-1 px-2!">
-                        <CardTitle className="text-xl font-bold mb-2 bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        <CardTitle className="text-2xl font-extrabold mb-2 bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-400 bg-clip-text text-transparent">
                           {projeto.titulo}
                         </CardTitle>
                         <CardDescription className="text-gray-100 leading-relaxed text-sm">
@@ -198,13 +208,12 @@ export default function Projetos() {
                         </div>
                       </CardContent>
 
-                      <CardFooter className="flex gap-3 pt-4 border-t border-white/10">
+                      <CardFooter className="flex p-2! pb-3!">
                         {projeto.link && (
                           <Button
                             asChild
-                            variant="ghost"
                             size="sm"
-                            className="w-full group/btn hover:bg-purple-500/20 hover:text-purple-400 transition-colors"
+                            className="w-full h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold transition-all duration-300 border-0 shadow-lg hover:shadow-xl"
                           >
                             <Link
                               href={projeto.link}
@@ -212,8 +221,8 @@ export default function Projetos() {
                               rel="noopener noreferrer"
                               className="flex items-center justify-center gap-2"
                             >
-                              <ExternalLink className="w-4 h-4" />
                               Ver Projeto
+                              <ArrowRight className="w-4 h-4" />
                             </Link>
                           </Button>
                         )}

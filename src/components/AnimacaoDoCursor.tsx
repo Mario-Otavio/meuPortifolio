@@ -14,7 +14,19 @@ export default function AnimacaoDoCursor() {
   const inicializadoRef = useRef(false);
 
   useEffect(() => {
-    if (inicializadoRef.current || !referenciaCanvas.current) return;
+    // Detecta dispositivos móveis/tablets para não carregar a animação pesada
+    const isMobile =
+      typeof window !== "undefined" &&
+      (window.matchMedia("(pointer: coarse)").matches ||
+        window.matchMedia("(hover: none)").matches ||
+        (navigator.maxTouchPoints ?? 0) > 0 ||
+        window.innerWidth < 1024 ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        ));
+
+    if (isMobile || inicializadoRef.current || !referenciaCanvas.current)
+      return;
     inicializadoRef.current = true;
 
     let limpar: (() => void) | undefined;

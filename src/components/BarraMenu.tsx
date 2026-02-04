@@ -49,9 +49,8 @@ export default function BarraMenu() {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b border-gray-700/30 ${
-        rolado ? "border-gray-700/30" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-gray-700/30 ${rolado ? "border-gray-700/30" : "bg-transparent"
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -111,9 +110,8 @@ export default function BarraMenu() {
                     }
                   }
                 }}
-                className={`relative text-base font-medium transition-colors ${
-                  estaAtivo ? "text-white" : "text-white/60 hover:text-white"
-                }`}
+                className={`relative text-base font-medium transition-colors ${estaAtivo ? "text-white" : "text-white/60 hover:text-white"
+                  }`}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index + 0.3 }}
@@ -155,7 +153,7 @@ export default function BarraMenu() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full left-0 right-0 md:hidden pl-13! bg-transparent backdrop-blur-lg! border-b border-gray-700/30"
+              className="absolute top-full left-0 right-0 md:hidden pl-13! bg-transparent backdrop-blur-xl! border-b border-gray-700/30"
             >
               <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
                 {navItems.map((item, index) => {
@@ -200,11 +198,10 @@ export default function BarraMenu() {
                           }
                         }
                       }}
-                      className={`relative text-base font-medium transition-colors py-2 ${
-                        estaAtivo
+                      className={`relative text-base font-medium transition-colors py-2 ${estaAtivo
                           ? "text-white"
                           : "text-white/60 hover:text-white"
-                      }`}
+                        }`}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -20 }}
