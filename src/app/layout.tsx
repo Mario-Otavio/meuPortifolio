@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import CursorWrapper from "@/components/CursorWrapper";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,7 +53,7 @@ export default function RootLayout({
           <div className="absolute inset-0 pointer-events-none bg-radial-purple" />
         </div>
 
-        <CursorWrapper />
+
         <div className="relative z-10">{children}</div>
       </body>
     </html>

@@ -42,6 +42,14 @@ const projetos: Projeto[] = [
     link: "https://arte-final.vercel.app/",
   },
   {
+    titulo: "João Olavo Barber",
+    descricao:
+      "Landing page moderna e elegante de um barbeiro, com design sofisticado e responsivo. Apresenta serviços, galeria de trabalhos e informações de contato de forma profissional e atraente.",
+    tecnologias: ["Astro", "Lucide Icons", "Tailwind CSS", "Google Fonts"],
+    imagem: "/barbearia.webp",
+    link: "https://joaoolavobarber.vercel.app/",
+  },
+  {
     titulo: "Decorando Momentos",
     descricao:
       "Landing page de aluguel de decorações temáticas completas para festas infantis e aniversários. Transforme seu evento com cenários incríveis como Homem-Aranha, Mundo Bita, Carros e muitos outros!",

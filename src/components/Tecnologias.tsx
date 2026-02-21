@@ -11,11 +11,15 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
-  SiSharp,
+  SiDotnet,
   SiPostgresql,
   SiGithub,
   SiMui,
   SiShadcnui,
+  SiClerk,
+  SiReactquery,
+  SiZod,
+  SiAstro,
 } from "react-icons/si";
 import { IconBrandFramerMotion } from "@tabler/icons-react";
 
@@ -51,6 +55,8 @@ function CardTecnologia({
       return "from-cyan-400 via-cyan-400 to-cyan-400";
     if (tecnologia.cor.includes("purple"))
       return "from-purple-400 via-purple-400 to-purple-400";
+    if (tecnologia.cor.includes("red"))
+      return "from-red-500 via-red-500 to-red-500";
     if (tecnologia.cor.includes("white"))
       return "from-white via-white to-white";
     if (tecnologia.cor.includes("gray"))
@@ -70,7 +76,7 @@ function CardTecnologia({
           scale: 1,
           y: 0,
           transition: {
-            duration: 0.5,
+            duration: 0,
             ease: "easeOut",
           },
         },
@@ -78,7 +84,7 @@ function CardTecnologia({
       whileHover={{
         scale: 1.05,
         y: -5,
-        transition: { duration: 0.2, ease: "easeOut" },
+        transition: { duration: 0, ease: "easeOut" },
       }}
     >
       <div
@@ -107,11 +113,6 @@ function CardTecnologia({
 }
 
 const tecnologias: Tecnologia[] = [
-  {
-    nome: "HTML",
-    icone: SiHtml5,
-    cor: "text-orange-500",
-  },
   {
     nome: "CSS",
     icone: SiCss3,
@@ -143,8 +144,13 @@ const tecnologias: Tecnologia[] = [
     cor: "text-cyan-400",
   },
   {
-    nome: "C#",
-    icone: SiSharp,
+    nome: "Clerk Authentication",
+    icone: SiClerk,
+    cor: "text-white",
+  },
+  {
+    nome: ".NET/C#",
+    icone: SiDotnet,
     cor: "text-purple-400",
   },
   {
@@ -166,6 +172,21 @@ const tecnologias: Tecnologia[] = [
     nome: "MUI/Shadcn",
     icone: SiMui,
     cor: "text-blue-400",
+  },
+  {
+    nome: "TanStack Query",
+    icone: SiReactquery,
+    cor: "text-red-500",
+  },
+  {
+    nome: "Zod",
+    icone: SiZod,
+    cor: "text-blue-600",
+  },
+  {
+    nome: "Astro",
+    icone: SiAstro,
+    cor: "text-orange-500",
   },
 ];
 
